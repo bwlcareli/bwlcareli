@@ -245,7 +245,7 @@ catch(err){_.logError(err);}}};for(var name in m){if($[name]===undefined)$[name]
 		'pages.pagename.disclaimer-form': 'Widerrufsformular',
 		'pages.pagetitle.disclaimer-form': 'Widerrufsformular',
 		'txt.checkout-step': 'Schritt',
-		'txt.contact-info': 'Careli<BR> <BR> <DIV><BR>Telefon: </DIV><DIV>Telefax: <BR>E-mail: </DIV>',
+		'txt.contact-info': 'Careli GmbH<BR>Carelistr. 3<BR>28215 Bremen Findorff<DIV><BR>Telefon: 0421-227354</DIV><DIV>Telefax: <BR>E-mail: info@careli.de</DIV>',
 		'txt.label.category': 'Warengruppe',
 		'txt.label.current-location': 'Sie sind hier:',
 		'txt.label.page': 'Seite',
