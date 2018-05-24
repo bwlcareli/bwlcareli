@@ -1,0 +1,17 @@
+.product-search-progress {
+	clear:both;
+	margin-top:3px;
+	padding:4px;
+}
+.product-search-progress .progress-status {
+	font-weight:bold;
+	line-height:normal;	
+	/*font-size:1.1em;*/
+}
+.product-search-progress .progress-result {
+	clear:both;
+	padding-top:4px;
+}
+.product-search-error {
+	color:#f00000;
+}

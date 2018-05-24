@@ -1,0 +1,11 @@
+PKID;ProductID;EAN;ProductName;ShortDesc;SerializedVarString;ManufactName;MetaKeywords;SeeAlsoKeywords;LongDesc
+1;PD_X201001;;Damentasche_201;;;;;;
+2;PD_X201002;;Damentasche_202;;;;;;
+3;PD_X201003;;Damentasche_203;;;;;;
+4;PD_X201004;;Herrentasche_201;;;;;;
+5;PD_X201005;;Herrentasche_202;;;;;;
+6;PD_X201006;;Rucksack_201;;;;;;
+7;PD_X201007;;Rucksack_202;;;;;;
+8;PD_X201008;;Rucksack_203;;;;;;
+9;PD_X201009;;Sporttasche_201;;;;;;
+10;PD_X201010;;Sporttasche_202;;;;;;

@@ -1,0 +1,18 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Redirect...</title>
+	<script type="text/javascript">
+		var SMOMAbsoluteBasePath = "/../..";
+		var SMOMCurrentPath = "";
+		var SMOMAbsoluteRootURL = location.href.substring(0, location.href.lastIndexOf("/") - SMOMCurrentPath.length);if(SMOMAbsoluteRootURL.charAt(SMOMAbsoluteRootURL.length - 1)=="/") SMOMAbsoluteRootURL = SMOMAbsoluteRootURL.substring(0, SMOMAbsoluteRootURL.length - 1);
+		var SMOMIsCheckout = true;
+
+		function redirOpenerAndClose(){
+			location.replace(SMOMAbsoluteRootURL + SMOMAbsoluteBasePath + "/pg19.html" + location.search);
+		};
+	</script>
+</head>
+<body onload="redirOpenerAndClose();"></body>
+</html>

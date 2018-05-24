@@ -1,0 +1,16 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Redirect...</title>
+	<script type="text/javascript">
+		function redirOpenerAndClose(){
+			if(window.opener){
+				opener.location.replace(opener.SMOMAbsoluteRootURL + "/pg17.html");
+				top.close();
+			};
+		};
+	</script>
+</head>
+<body onload="redirOpenerAndClose();"></body>
+</html>
