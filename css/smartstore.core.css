@@ -1,0 +1,1306 @@
+/* -------------------------------------------------------------- 
+
+   smartstore.base.css
+   * Defines reset and general/core rules
+   
+-------------------------------------------------------------- */
+
+
+/* General/Reset
+-------------------------------------------------------------- */
+
+ /* always force a scrollbar in non-IE */
+html 								{ overflow-y: scroll }
+ 
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, legend, form, label, caption,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video  {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent
+}
+
+table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+.reset 								{ margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3em; text-decoration: none; font-size: 100%; list-style: none }
+
+body 								{ margin: 10px; line-height: 1 }
+
+article, aside, figure, footer, header, 
+hgroup, 
+nav, 
+section 							{ display: block }
+
+/* Remove annoying border on linked images. */
+a img 								{ border: none }
+/* Explicitly set interpolation, allowing dynamically resized images to not look horrible */
+.ie img 							{ -ms-interpolation-mode: bicubic }
+
+hr 									{ display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 0.4em 0; padding: 0 }
+/* IE 7 has problems with setting proper <hr> margins. */
+.ie7 hr  							{ margin: -8px auto 11px }
+
+.ie a span 							{ cursor: pointer }
+
+
+/* Floating
+-------------------------------------------------------------- */
+
+.fl 								{ float: left }
+.fr 								{ float: right }
+.fc 								{ clear: both }
+
+
+/* Alignment
+-------------------------------------------------------------- */
+
+.ar    								{ text-align: right }
+.al     							{ text-align: left }
+.ac   								{ text-align: center }
+.aj  								{ text-align: justify }
+
+.va-t    							{ vertical-align: top }
+.va-m     							{ vertical-align: middle }
+.va-b   							{ vertical-align: bottom }
+
+
+/* Display
+-------------------------------------------------------------- */
+.d-b								{ display: block; }
+.d-i								{ display: inline; }
+.d-n								{ display: none; }
+.d-ib								{ display: inline-block; }
+.d-tc								{ display: table-cell; }
+
+/* White space
+-------------------------------------------------------------- */
+.ws-nowrap							{ white-space: nowrap; }
+
+
+/* Hiding
+-------------------------------------------------------------- */
+
+.hidden, [hidden] 					{ display: none !important } 
+.invisible 							{ visibility: hidden !important }
+.transparent						{ opacity: 0 !important; filter: Alpha(opacity=0) !important; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
+.hidden-accessible 					{ border: 0; clip: rect(0,0,0,0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px }
+.hidden-layoutable 					{ left: -9999px }
+/* Extends the .hidden-accessible class to allow the element to be focusable when navigated to via the keyboard */
+.hidden-accessible.focusable:active,
+.hidden-accessible.focusable:focus 	{ clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* For image replacement */
+.ir 								{ display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr }
+
+
+/* Clearing & fixing
+-------------------------------------------------------------- */
+
+.clear 								{ clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0 }
+
+.clearfix							{ display: block; zoom: 1 }
+.clearfix:before,
+.clearfix:after 					{ clear: both; content: "\0020"; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; overflow: hidden }
+* html .clearfix,
+*:first-child+html .clearfix 		{ height: 1% }
+
+.zfix 								{ width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter: Alpha(Opacity=0) }
+.iepre9 .alphafix					{ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF) }
+
+
+/* Orientation
+-------------------------------------------------------------- */
+
+.alpha /*, first */					{ margin-left: 0 !important; }
+.omega /*, last */					{ margin-right: 0 !important; }
+.top								{ margin-top: 0 !important; }
+.bottom								{ margin-bottom: 0 !important; }
+
+.mg-t12 							{ margin-top: 12px; }
+
+
+/* width
+-------------------------------------------------------------- */
+.cxpc100 							{ width: 100%; }
+.cxpc70  							{ width: 70%; }
+.cxpc40  							{ width: 40%; }
+.cxpc30  							{ width: 30%; }
+
+
+/* Opacity
+-------------------------------------------------------------- */
+
+.o0 								{ opacity: 0 !important; filter: Alpha(Opacity=0) !important; visibility: hidden }
+.o10 								{ opacity: .1; filter: Alpha(Opacity=10) }
+.o20 								{ opacity: .2; filter: Alpha(Opacity=20) }
+.o30 								{ opacity: .3; filter: Alpha(Opacity=30) }
+.o40 								{ opacity: .4; filter: Alpha(Opacity=40) }
+.o50 								{ opacity: .5; filter: Alpha(Opacity=50) }
+.o60 								{ opacity: .6; filter: Alpha(Opacity=60) }
+.o70 								{ opacity: .7; filter: Alpha(Opacity=70) }
+.o80 								{ opacity: .8; filter: Alpha(Opacity=80) }
+.o90 								{ opacity: .9; filter: Alpha(Opacity=90) }
+.o100 								{ opacity: 1; filter:  Alpha(Opacity=100) }
+
+
+/* Icons
+-------------------------------------------------------------- */
+.sm-icon {
+	display: block;
+	vertical-align: middle;
+	position: relative;
+	width: 16px;
+	height: 16px;
+	text-indent: -99999px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	overflow: hidden;
+}
+/* -------------------------------------------------------------- 
+
+   smartstore.lists.css
+   * Sets up default list formatting.
+
+-------------------------------------------------------------- */
+
+/* General
+-------------------------------------------------------------- */
+
+ul, ol      		{ margin: 0 0 1.5em 0; padding-left: 0 }
+ul          		{ list-style-type: disc }
+ol          		{ list-style-type: decimal }
+
+ul li,
+ol li 				{ margin-left: 1.667em }
+
+li ul,
+li ol       		{ margin: 0 }
+li ol				{ list-style: lower-latin }
+
+dl          		{ margin: 0 0 1.5em 0 }
+dl dt       		{ font-weight: bold }
+dd          		{ margin-left: 1.5em }
+
+/* Horizontal oriented lists (ul/ol > li)
+-------------------------------------------------------------- */
+
+ul.horizontal,
+ol.horizontal		{ /*margin: 0; padding: 0;*/ list-style: none }
+ul.horizontal > li,
+ol.horizontal > li	{ /*margin: 0; padding: 0;*/ float: left }
+
+/* Nav
+-------------------------------------------------------------- */
+
+nav ul 					{ list-style: none }
+
+nav ul,
+nav ol,
+nav ul li,
+nav ol li				{ margin: 0; list-style-image: none }
+
+nav li a				{ display: block; zoom: 1 }
+nav li a:hover			{ /* text-decoration: none */ }
+
+nav li a span.icon		{ text-align: center; /* vertical-align: middle; */ vertical-align: text-top; margin-right: 3px; position: relative; width: 16px; height: 16px; display: inline-block; /*background-position: 50% 50%; background-repeat: no-repeat */ }
+nav li a span.icon img 	{ max-width: 16px; max-height: 16px }
+
+/* Rich Element Lists
+-------------------------------------------------------------- */
+/* -------------------------------------------------------------- 
+
+   smartstore.table.css
+   * Sets up default table formatting.
+   
+-------------------------------------------------------------- */
+
+table 				{ /*display: inline-table; border-collapse: collapse; border-spacing: 0*/ border-collapse: collapse }
+td, th 				{ vertical-align: middle }
+th					{ font-weight: bold; text-align: center }
+td 					{ vertical-align: top }
+caption, td 		{ text-align: left; font-weight: normal }
+th, td, caption 	{ padding: 0.4em }
+tfoot				{ font-style: italic }
+
+td, td img 			{ vertical-align: middle } 
+
+
+
+/* -------------------------------------------------------------- 
+
+   smartstore.typo.css
+   * Sets up some sensible default typography.
+
+-------------------------------------------------------------- */
+
+/* Default font settings
+-------------------------------------------------------------- */
+
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html 									{ -webkit-font-smoothing: antialiased; font-size: 100.01%; }
+body									{ 
+	font-family: Calibri, Helvetica, sans-serif; 
+	font-size: 0.8em; 
+	line-height: 1.4em;
+	text-transform: none; 
+	letter-spacing: 0em; 
+}
+
+/* overwrite some specific default sizes */
+table, select, input, textarea, button 	{ font-size: inherit }
+body, select, input, textarea 			{ color: #646464 }
+select, input, textarea, button 		{ font-size: 99%; font-family: inherit /* takes system settings otherwise */ }
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 					{ /* text-rendering: optimizeLegibility */ /* makes problems in webkit in combination with text-shadow */ }
+
+h1, h2, .t-x-large {
+	font: normal normal bold 1em/1.4em Calibri, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: -0.05em;
+}
+
+h3, h4, .t-large {
+	font: normal normal bold 1em/1.4em Calibri, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: 0em;
+}
+
+h5, h6, .t-normal {
+	font: normal normal normal 1em/1.4em Calibri, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: 0em;
+}
+
+.t-small {
+	font: normal normal normal 1em/1.4em Calibri, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: 0em;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child	{ margin-top: 0 }
+
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+.t-x-large		{ font-size: 2.6em }
+.t-large		{ font-size: 1.5em }
+.t-small		{ font-size: 0.9em }
+
+h1 				{ font-size: 2.6em; margin-bottom: 0.5em }
+h2 				{ font-size: 2em; margin-bottom: 0.75em }
+h3 				{ font-size: 1.5em; margin-bottom: 1em }
+h4 				{ font-size: 1.2em; margin-bottom: 1.2em }
+h5 				{ font-size: 1em; margin-bottom: 1em; font-weight: bold; font-style: italic }
+h6 				{ font-size: 1em; font-weight: bold }
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p				{ margin: 0 0 1.2em; line-height: 1.5em }
+/* p:last-child	{ margin-bottom: 0 !important } /* ist problematisch! */ */
+p img.left		{ float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right		{ float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+a				{ color: #178EA8; text-decoration: none }
+a:visited 		{ color: #178EA8 }
+a:hover			{ color: #228195; text-decoration: underline }
+a:active		{ }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover,
+a:active		{ outline: none }
+a:focus			{ /*outline: thin dotted*/ }
+
+blockquote {
+	font-family: Georgia, "Times New Roman", Times, serif; 
+	margin: 5px; 
+	padding: 10px;
+	/* font-size: 1.52em; Compat-Probleme mit Biz5-Shops, daher abgeschaltet :-( */
+	color: #999; 
+	font-style: italic; 
+	line-height: 1.3em; 
+	width: 100%;
+}
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, 
+blockquote:after, 
+q:before,
+q:after 		{ content: ''; content: none }
+blockquote, q 	{ quotes: none }
+
+blockquote.fl	{ border-right: 1px dashed #ccc; width:35%; float: left; } /* float blockquote left, and set width */
+blockquote.fr	{ border-left: 1px dashed #ccc; width:35%; float: right; } /* float blockquote right and set a width */
+
+ins 			{ text-decoration: none; background-color: #ff9; color: #000 }
+del 			{ text-decoration: line-through; color: #666 }
+mark 			{ font-style: italic; font-weight: bold; background-color: #ff9; color: #000 }
+
+strong			{ font-weight: bold }
+em, dfn			{ font-style: italic }
+dfn				{ font-weight: bold }
+
+/* Set sub, sup without affecting line-height */
+sup, sub		{ font-size: 75%; line-height: 0; position: relative }
+sub 			{ top: -0.5em }
+sup 			{ bottom: -0.25em }
+
+abbr, 
+acronym			{ border-bottom: 1px dotted #666 }
+address			{ margin: 0 0 1.5em; font-style: italic }
+
+abbr[title], 
+dfn[title] 		{ border-bottom: 1px dotted #444; cursor: help }
+
+pre { 
+	padding: 1.5em; 			/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+	white-space: pre; 			/* CSS2 */
+	white-space: pre-wrap; 		/* CSS 2.1 */
+	white-space: pre-line; 		/* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; 		/* IE */
+}
+
+pre, code, tt, kbd, samp, .t-mono { 
+	font: normal normal normal 1em/1.4em 'andale mono', 'lucida console', monospace; 
+	text-transform: none;
+	letter-spacing: 0em;
+}
+
+code { 
+	display:block; 
+	padding: 0px 2px 4px 26px; 
+	/*
+	background-color: #d5d2d8; 
+	background: #fff url(../images/code.jpg) no-repeat left top; 
+	*/
+	color:#000;
+	line-height: 1.67em;
+}
+
+/* Fixes IE7 missing wrapping of code elements. */
+.ie7 p code { white-space: normal }
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.ellipsis 		{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis }
+
+.wkit .fw600	{ font-weight: 600 }
+.bold			{ font-weight: bold }
+.italic			{ font-style: italic }
+.ucase			{ text-transform: uppercase }
+.lcase			{ text-transform: lowercase }
+
+.xx-smaller,
+.x-smaller,
+.smaller {
+	font: normal normal normal 1em/1.4em Calibri, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: 0em;
+}
+
+.larger,
+.x-larger,
+.xx-larger {
+	font: normal normal bold 1em/1.4em Calibri, Helvetica, sans-serif;
+	text-transform: none;
+	letter-spacing: 0em;
+} 
+
+.xx-smaller 		{ font-size: .7em !important }
+.x-smaller  		{ font-size: .87em !important }
+.smaller    		{ font-size: .9em !important }
+.larger     		{ font-size: 1.2em !important }
+.x-larger   		{ font-size: 1.4em !important }
+.xx-larger  		{ font-size: 1.8em !important }
+
+/* TODO: Farben auf Basis des ColorSchemes dynamisieren */
+.x-quiet    		{ color: #B4B4B4; }
+.quiet      		{ color: #8B8B8B; }
+.loud       		{ color: #23232C; font-weight: bold }
+.hilite  			{ background: #f90 }
+.added     		 	{ background: #060; color: #fff }
+.removed    		{ background: #900; color: #fff }
+.error				{ color: red; font-style: normal}
+.error:not(input)	{ font-weight: bold }
+
+/* More special formatting
+-------------------------------------------------------------- */
+
+/* These selection declarations have to be separate.
+   No text-shadow: twitter.com/miketaylr/status/12228805301 
+   Also: hot pink. */
+::-moz-selection { background: #3d71b8; color: #fff; text-shadow: none }
+::selection { background: #3d71b8; color: #fff; text-shadow: none } 
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #3d71b8; } 
+
+/* Generic page formatting
+-------------------------------------------------------------- */
+
+.page-date, 
+.page-headline, 
+.page-title,
+.page-intro							{ display: block; font-size: 1em; margin: 0 0 0.5em 0 }
+
+.page-headline						{ color: #52C0D8 }
+.page-headline span					{ font-size: 1.4em }
+
+.page-title 						{ color: #5D5D5D; margin-bottom: 1em }
+.page-title span					{ font-size: 1.8em }
+.page-title-larger span 			{ font-size: 2.2em }
+
+font[size] 							{ line-height: 1.5em; }
+/* ============================================================= 
+   smartstore.layout.css
+   * Composes the page layout based on user settings.
+   created css classes on body element:
+   	* lyt-level-[0-3]
+   	* lyt-align-[left|center|right]
+   	* lyt-margin[top|right|bottom|left]
+   	* lyt-no-margin[top|right|bottom|left]
+   	* lyt-hf-[stretched|fixed|left|right]
+   	* lyt-nav-[stretched|fixed|left|right]
+   	* lyt-body-[stretched|fixed]
+   	* lyt-banner-pos[left|right]
+============================================================== */
+
+/* Modules
+-------------------------------------------------------------- */
+.module-wrapper 		{ padding-top: 3px; padding-bottom: 3px }
+.module-wrapper.no-cnt 	{ overflow: hidden }
+.message 				{ display: none }
+/* Generic
+-------------------------------------------------------------- */
+#header-wrapper, #header,
+#content-wrapper, #content,
+#footer-wrapper, #footer {
+	position: relative;
+}
+body {
+	padding: 10px 10px 10px 10px;
+	margin: 0;
+}
+/* .col > Content-Spalten (links, rechts, mitte) */
+.col {
+	overflow: visible; /* hidden; */ /* TODO: (MC) wegen abgeschnittenen Shadows auf visible gestellt! */
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#content {
+	clear: both;
+	/*padding-top: 10px;
+	padding-bottom: 10px;*/
+}
+#content-inner {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#content-left, .col-left {
+	float: left;
+	width: 170px;
+}
+.col-space-left {
+	float: left;
+	width: 180px;
+}
+#content-right, .col-right {
+	float: right;
+	width: 170px;	
+}
+.col-space-right {
+	float: right;
+	width: 180px;
+}
+#content-body {
+	margin-left: 185px;
+	margin-right: 185px;
+}
+#content-body.span-left {
+	margin-left: 5px;
+}
+#content-body.span-right {
+	margin-right: 5px;
+}
+#content-body.span-left.span-right {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/* Layout
+-------------------------------------------------------------- */
+
+	#page { width: 960px; margin-left: auto; margin-right: auto }
+
+/* specific layout overrides based on grid settings
+-------------------------------------------------------------- */
+.lyt-no-margintop  #header-banner {
+	border-top: none;
+}
+.lyt-hf-left.lyt-no-marginleft #header-banner {
+	/*border-left: none;
+	-moz-border-radius-topleft: 0 0; -webkit-border-top-left-radius: 0 0; border-top-left-radius: 0 0;*/
+}
+.lyt-hf-right.lyt-no-marginright #header-banner {
+	/*border-right: none;
+	-moz-border-radius-topright: 0 0; -webkit-border-top-right-radius: 0 0; border-top-right-radius: 0 0;*/
+}
+/* header-home and header-bar */
+.lyt-nav-stretched #header-home,
+.lyt-nav-stretched #header-bar,
+.lyt-nav-left #header-home,
+.lyt-nav-left #header-bar {
+	/*border-left: none;
+	-moz-border-radius-topleft: 0 0; -webkit-border-top-left-radius: 0 0; border-top-left-radius: 0 0;*/
+}
+.lyt-nav-stretched #header-home,
+.lyt-nav-stretched #header-bar,
+.lyt-nav-right #header-home,
+.lyt-nav-right #header-bar {
+	/*border-right: none;
+	-moz-border-radius-topright: 0 0; -webkit-border-top-right-radius: 0 0; border-top-right-radius: 0 0;*/
+}
+.lyt-banner-posleft #header-banner { 
+	background-position: 0 50% 
+}
+.lyt-banner-posright #header-banner { 
+	background-position: 100% 50% 
+}
+.hf-bar { left: 0; right: 0; }
+
+.content-fill, .content-1, .content-2, .content-3, .content-left, .content-right, .content-4, .content-5, .content-6, .content-7, .content-8, .content-9, .content-10, .content-body, .content-11, .content-12, .content-13, .content-14, .content-15, .content-16{ position: relative; /*overflow: hidden;*/ margin-left: 5px; margin-right: 5px;}
+
+.content-1{ width: 50px; }
+.content-2{ width: 110px; }
+.content-3, .content-left, .content-right{ width: 170px; }
+.content-4{ width: 230px; }
+.content-5{ width: 290px; }
+.content-6{ width: 350px; }
+.content-7{ width: 410px; }
+.content-8{ width: 470px; }
+.content-9{ width: 530px; }
+.content-10, .content-body{ width: 590px; }
+.content-11{ width: 650px; }
+.content-12{ width: 710px; }
+.content-13{ width: 770px; }
+.content-14{ width: 830px; }
+.content-15{ width: 890px; }
+.content-16{ width: 950px; }
+
+.push-1{ left: 60px; }
+.push-2{ left: 120px; }
+.push-3, .push-left, .push-right{ left: 180px; }
+.push-4{ left: 240px; }
+.push-5{ left: 300px; }
+.push-6{ left: 360px; }
+.push-7{ left: 420px; }
+.push-8{ left: 480px; }
+.push-9{ left: 540px; }
+.push-10, .push-body{ left: 600px; }
+.push-11{ left: 660px; }
+.push-12{ left: 720px; }
+.push-13{ left: 780px; }
+.push-14{ left: 840px; }
+.push-15{ left: 900px; }
+
+.pull-1{ left: -60px; }
+.pull-2{ left: -120px; }
+.pull-3, .pull-left, .pull-right{ left: -180px; }
+.pull-4{ left: -240px; }
+.pull-5{ left: -300px; }
+.pull-6{ left: -360px; }
+.pull-7{ left: -420px; }
+.pull-8{ left: -480px; }
+.pull-9{ left: -540px; }
+.pull-10, .pull-body{ left: -600px; }
+.pull-11{ left: -660px; }
+.pull-12{ left: -720px; }
+.pull-13{ left: -780px; }
+.pull-14{ left: -840px; }
+.pull-15{ left: -900px; }
+
+/* -------------------------------------------------------------- 
+
+   smartstore.primitives.css
+
+-------------------------------------------------------------- */
+
+.popup { 
+	border: 1px solid #9E9E9E; 
+	color: #646464;
+	background-color: #FFFFFF;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(50%, #FFFFFF), color-stop(100%, #FFFFFF) );
+	background: linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -moz-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -webkit-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -o-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -ms-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF', GradientType=0 );
+	-webkit-box-shadow: 0 4px 22px -3px rgba(0,0,0, 0.6); -moz-box-shadow: 0 4px 22px -3px rgba(0,0,0, 0.6); box-shadow: 0 4px 22px -3px rgba(0,0,0, 0.6);
+}
+.popup a { color: #000000; }
+.popup a:hover { color: #333333; }
+.popup .ui-icon {background-image: url(../images/icons_646464_256_240.png); }
+
+.dropdown { 
+	border: 1px solid #9E9E9E !important; 
+	color: #646464;
+	background-color: #FFFFFF;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(50%, #FFFFFF), color-stop(100%, #FFFFFF) );
+	background: linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -moz-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -webkit-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -o-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	background: -ms-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF', GradientType=0 );
+	-webkit-box-shadow: 1px 1px 6px rgba(0,0,0, 0.25); -moz-box-shadow: 1px 1px 6px rgba(0,0,0, 0.25); box-shadow: 1px 1px 6px rgba(0,0,0, 0.25);
+}
+
+.dropdown a { color: #000000; }
+.dropdown a:hover { color: #333333; }
+.dropdown .ui-icon {background-image: url(../images/icons_646464_256_240.png); }
+
+
+.ie9 .popup {
+	background: url(../images/box.gradient.svg);
+	background-size: 100% 100%;
+}
+
+
+.dropdown-tab {
+	border: 1px solid #9E9E9E !important;
+	color: #000000 !important;
+	-webkit-box-shadow: 1px 1px 6px rgba(0,0,0, 0.25), 0 0 1px rgba(255,255,255, 1) inset; -moz-box-shadow: 1px 1px 6px rgba(0,0,0, 0.25), 0 0 1px rgba(255,255,255, 1) inset; box-shadow: 1px 1px 6px rgba(0,0,0, 0.25), 0 0 1px rgba(255,255,255, 1) inset;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(50%, #FFFFFF), color-stop(100%, #FFFFFF) ) !important;
+	background: linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% ) !important;
+	background: -moz-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% ) !important;
+	background: -webkit-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% ) !important;
+	background: -o-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% ) !important;
+	background: -ms-linear-gradient( top, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100% ) !important;
+}
+
+.dropdown-tab.horizontal {
+	border-bottom-color: #FFFFFF !important;
+}
+
+.dropdown-tab.vertical {
+	border-right-color: #FFFFFF !important;
+}
+/*
+.moz .dropdown-tab.horizontal{
+	border-bottom: none;
+}
+*/
+.moz .dropdown-tab.vertical {
+	border-right: none !important;
+}
+
+.dropdown-tab a span {
+	color: #000000 !important;
+}
+
+.no-cssgradients .dropdown-tab {
+	background: #FFFFFF !important;
+}
+
+
+.ie9 .dropdown {
+	background: url(../images/box.gradient.svg) #fff;
+	background-size: 100% 100%;
+}
+
+.ie9 .dropdown-tab {
+	background: url(../images/menuitem.gradient.svg) #fff !important;
+	background-size: 100% 100%;
+}
+
+
+/* a hovered element within .popup or .dropdown */
+.box-hover {
+	background-color: #E0E0E0 !important; 
+	color: #272727 !important;
+}
+
+.box-hover a { color: #272727 !important; }
+
+.content-shadow {
+	;
+}
+
+
+
+
+/* -------------------------------------------------------------- 
+   smartstore.index.css
+-------------------------------------------------------------- */
+/*
+.product-list .pl-row {
+	padding: 5px 0;
+}
+
+.product-list .pl-cell {
+	position: relative;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.product-list .pl-cell .pl-element {
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.product-list .pl-cell.alpha .pl-element {
+	margin-left: 0 !important;
+}
+
+.product-list .pl-cell.omega .pl-element {
+	margin-right: 0 !important;
+}
+*/
+#paginator-top,
+#paginator-bottom{
+	margin: 0 5px 0 5px;
+}
+.list-header,
+.list-footer{
+	margin: 5px 5px 5px 5px;
+	padding: 5px;
+}
+.pl-row {
+	padding: 5px 0;
+}
+.pl-cell {
+	position: relative;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.pl-cell .pl-element {
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+}
+.pl-cell.alpha .pl-element {
+	margin-left: 0 !important;
+}
+.pl-cell.omega .pl-element {
+	margin-right: 0 !important;
+}
+.pl-element h4 {
+	font-size: 1em;
+}
+.pl-element h4.larger {
+	font-size: 1.2em !important;
+}
+.pl-name{
+	margin-bottom: 5px;
+}
+.pl-desc{
+	margin-bottom: 5px;
+}
+/* -------------------------------------------------------------- 
+   smartstore.index.theme.css
+-------------------------------------------------------------- */
+
+.pl-element.alt {
+	background-color: #F0F0F0 !important;
+}
+
+.pl-element.border {
+	background-color: #FFFFFF;
+	border: 1px solid #E0E0E0;
+	/*border-right-color: #5D5D5D;
+	border-bottom-color: #5D5D5D;*/
+	-moz-border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px; -webkit-border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px; border-radius: 4px 4px 4px 4px / 4px 4px 4px 4px;
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0, 0.14); -moz-box-shadow: 0px 0px 6px rgba(0,0,0, 0.14); box-shadow: 0px 0px 6px rgba(0,0,0, 0.14)
+}
+
+.pl-element.border.animate {
+	transition-property: box-shadow, border-color;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	-moz-transition-property: box-shadow, border-color;
+	-moz-transition-duration: 0.2s;
+	-moz-transition-timing-function: linear;
+	-webkit-transition-property: box-shadow, border-color;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	-o-transition-property: box-shadow, border-color;
+	-o-transition-duration: 0.2s;
+	-o-transition-timing-function: linear;
+	-ms-transition-property: box-shadow, border-color;
+	-ms-transition-duration: 0.2s;
+	-ms-transition-timing-function: linear;
+}
+
+.pl-element.border.animate:hover {
+	border: 1px solid #A6DFEB;
+	-webkit-box-shadow: 0px 0px 9px rgba(34,129,149, 0.35); -moz-box-shadow: 0px 0px 9px rgba(34,129,149, 0.35); box-shadow: 0px 0px 9px rgba(34,129,149, 0.35)
+}
+
+.list-header,
+.list-footer{
+	/*-webkit-box-shadow: 0 0 8px rgba(0,0,0,0) inset, 1px 1px 6px rgba(0,0,0, 0.3); -moz-box-shadow: 0 0 8px rgba(0,0,0,0) inset, 1px 1px 6px rgba(0,0,0, 0.3); box-shadow: 0 0 8px rgba(0,0,0,0) inset, 1px 1px 6px rgba(0,0,0, 0.3);*/
+	border: 1px solid #E0E0E0;
+	background-color: #fff;
+}
+/* -------------------------------------------------------------- 
+
+   smartstore.sugar.css
+   * Defines misc rules to enhance rendering in modern browsers.
+
+-------------------------------------------------------------- */
+
+/* Transitions
+-------------------------------------------------------------- */
+.transition li a,
+a.transition,
+span.transition {
+	transition-property: color, background-color, border-color;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	-moz-transition-property: color, background-color, border-color;
+	-moz-transition-duration: 0.15s;
+	-moz-transition-timing-function: linear;
+	-webkit-transition-property: color, background-color, border-color;
+	-webkit-transition-duration: 0.15s;
+	-webkit-transition-timing-function: linear;
+	-o-transition-property: color, background-color, border-color;
+	-o-transition-duration: 0.15s;
+	-o-transition-timing-function: linear;
+	-ms-transition-property: color, background-color, border-color;
+	-ms-transition-duration: 0.15s;
+	-ms-transition-timing-function: linear;
+}
+
+/* Box shadows
+-------------------------------------------------------------- */
+.shadow {
+	-webkit-box-shadow: 2px 3px 3px rgba(0,0,0, 0.5);
+	   -moz-box-shadow: 2px 3px 3px rgba(0,0,0, 0.5);	
+	        box-shadow: 2px 3px 3px rgba(0,0,0, 0.5);
+}
+
+.shadow-near {
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0, 0.3);
+	   -moz-box-shadow: 0 1px 4px rgba(0,0,0, 0.3);	
+	        box-shadow: 0 1px 4px rgba(0,0,0, 0.3);
+}
+
+.shadow-glow {
+	-webkit-box-shadow: 0 0 24px rgba(0,0,0, 0.6);
+	   -moz-box-shadow: 0 0 24px rgba(0,0,0, 0.6);
+	        box-shadow: 0 0 24px rgba(0,0,0, 0.6);
+}
+
+/* Text shadows
+----------------------------------------------------------------------------------------------------*/
+/* [...] */
+
+/* Inset shadows (blurring boxes)
+----------------------------------------------------------------------------------------------------*/
+/* nice inset blur for content areas */
+/*
+.blurry-large {
+	-webkit-box-shadow: 0 0 56px rgba(0,0,0, 0.1) inset;
+	   -moz-box-shadow: 0 0 56px rgba(0,0,0, 0.1) inset;	
+	        box-shadow: 0 0 56px rgba(0,0,0, 0.1) inset;
+}
+
+.blurry {
+	-webkit-box-shadow: 0 0 32px rgba(0,0,0, 0.1) inset;
+	   -moz-box-shadow: 0 0 32px rgba(0,0,0, 0.1) inset;	
+	        box-shadow: 0 0 32px rgba(0,0,0, 0.1) inset;	
+}
+
+.blurry-small {
+	-webkit-box-shadow: 0 0 12px rgba(0,0,0, 0.1) inset;
+	   -moz-box-shadow: 0 0 12px rgba(0,0,0, 0.1) inset;	
+	        box-shadow: 0 0 12px rgba(0,0,0, 0.1) inset;	
+}
+*/
+
+/*
+.text-shadow { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) }
+.text-shadow-letterpress { text-shadow: -1px -1px 0px rgba(0,0,0, .5), 1px 1px 0px rgba(255,255,255, .5) }
+.text-shadow-emboss { text-shadow: 1px 1px 0px rgba(0,0,0, .5), -1px -1px 0px rgba(255,255,255, .5) }
+.text-shadow-glow { text-shadow: 0px 0px 10px rgba(255,255,255, .5), -1px -1px #000 }
+*/
+
+/* Transitions (Theme-spezifisch, später raus ? (odert doch nicht))
+----------------------------------------------------------------------------------------------------*/
+/*
+a, button, .info { 
+	-webkit-transition-property: background-color, color; 
+	-webkit-transition-duration: 0.15s; 
+	-webkit-transition-timing-function: linear }
+a > span, button > span { -webkit-transition: color 0.15s linear }
+*/
+
+ /* Transforms
+----------------------------------------------------------------------------------------------------*/
+/*
+.rotate {
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+}
+*/
+
+/* Background sizing
+----------------------------------------------------------------------------------------------------*/
+ /*
+.bg-resize {
+	-moz-background-size: 161px;
+	-webkit-background-size: 161px;
+	-o-background-size: 161px;
+	background-size: 161px;
+}
+*/
+
+
+/* -------------------------------------------------------------- 
+
+   smartstore.dropshadows.css
+   * defines sophisticated and image-less css3 drop-shadow effects
+   * Reference: http://nicolasgallagher.com/css-drop-shadows-without-images/
+   
+-------------------------------------------------------------- */
+
+
+/* General
+-------------------------------------------------------------- */
+.drop-shadow {
+    position: relative;
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+    content: "";
+    position: absolute; 
+    z-index: -2;
+}
+
+
+/* Lifted corners
+-------------------------------------------------------------- */
+
+.drop-shadow.lifted {
+	/* */
+}
+
+.drop-shadow.lifted:before,
+.drop-shadow.lifted:after { 
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);   
+       -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);    
+       -moz-transform: rotate(-3deg);   
+        -ms-transform: rotate(-3deg);   
+         -o-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+}
+
+.drop-shadow.lifted:after {
+    right: 10px; 
+    left: auto;
+    -webkit-transform: rotate(3deg);   
+       -moz-transform: rotate(3deg);  
+        -ms-transform: rotate(3deg);  
+         -o-transform: rotate(3deg);
+            transform: rotate(3deg);
+}
+
+
+/* Curled
+-------------------------------------------------------------- */
+
+.drop-shadow.curled {
+    border: 1px solid #efefef; 
+    -moz-border-radius: 0 0 120px 120px / 0 0 6px 6px;    
+         border-radius: 0 0 120px 120px / 0 0 6px 6px;
+}
+
+.drop-shadow.curled:before,
+.drop-shadow.curled:after {
+    bottom: 12px;
+    left: 10px;
+    width: 50%;
+    height: 55%;
+    max-width: 200px;
+    -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); 
+       -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); 
+    -webkit-transform: skew(-8deg) rotate(-3deg);
+       -moz-transform: skew(-8deg) rotate(-3deg);
+        -ms-transform: skew(-8deg) rotate(-3deg);
+         -o-transform: skew(-8deg) rotate(-3deg);
+            transform: skew(-8deg) rotate(-3deg);
+} 
+
+.drop-shadow.curled:after { 
+    right: 10px; 
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg); 
+       -moz-transform: skew(8deg) rotate(3deg);     
+        -ms-transform: skew(8deg) rotate(3deg);     
+         -o-transform: skew(8deg) rotate(3deg); 
+            transform: skew(8deg) rotate(3deg);
+}
+
+
+/* Perspective
+-------------------------------------------------------------- */
+
+.drop-shadow.perspective:before {
+    left: 80px;
+    bottom: 5px;
+    width: 50%;
+    height: 35%;
+    max-width: 200px;
+    -webkit-box-shadow: -80px 0 12px rgba(0, 0, 0, 0.4);
+       -moz-box-shadow: -80px 0 12px rgba(0, 0, 0, 0.4);
+            box-shadow: -80px 0 12px rgba(0, 0, 0, 0.4);
+    -webkit-transform: skew(50deg);
+       -moz-transform: skew(50deg);
+        -ms-transform: skew(50deg);
+         -o-transform: skew(50deg);
+            transform: skew(50deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+
+.drop-shadow.perspective:after {
+    display: none;
+}
+
+
+/* Raised shadow - no pseudo-elements needed
+-------------------------------------------------------------- */
+
+.drop-shadow.raised {
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15) inset;
+       -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15) inset;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15) inset;
+}
+
+
+/* Curved shadows
+-------------------------------------------------------------- */
+
+.drop-shadow.curved:before {
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 50%;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+       -moz-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    -moz-border-radius: 10px / 100px;
+         border-radius: 10px / 100px;
+}
+
+.drop-shadow.curved-vt-2:before {
+    right: 0;
+}
+
+.drop-shadow.curved-hz-1:before {
+    top: 50%;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    -moz-border-radius: 100px / 10px;
+         border-radius: 100px / 10px;
+}
+
+.drop-shadow.curved-hz-2:before {
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    -moz-border-radius: 100px / 10px;
+         border-radius: 100px / 10px;
+}
+
+/* Rotated box
+-------------------------------------------------------------- */
+
+.drop-shadow.rotated {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: rotate(-3deg);    
+       -moz-transform: rotate(-3deg);   
+        -ms-transform: rotate(-3deg);
+         -o-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+}
+
+.drop-shadow.rotated > :first-child:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15) inset;
+       -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15) inset;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.15) inset;
+}
+
+
+
+
+ 
+/* -------------------------------------------------------------- 
+
+   smartstore.misc.css
+   * Defines misc rules.
+
+-------------------------------------------------------------- */
+
+.sep-hor {
+	background: transparent url('../images/separator-hor.png') no-repeat center center;
+	display: inline-block;
+	position: relative;
+	width: 2px;
+	height: 100%;
+	line-height: 100%;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+div.media 				{ margin: 0 auto }
+.media-title 			{ text-align: center; padding-top: 3px }
+
+/* loader icon
+-------------------------------------------------------------- */
+.loader-icon-container {
+	display:hide;
+	position:absolute;
+	z-index:1;
+}
+
+/* module: see also
+-------------------------------------------------------------- */
+.see-also .title {
+	font-weight:bold;
+	margin-bottom:2px;
+}
+
+/* module: verify order
+-------------------------------------------------------------- */
+#verifyform > div{
+	padding: 1px 0 2px 0;
+}
+
+/* Generic horizontal separator
+-------------------------------------------------------------- */
+
+.hsep > * {
+	background-image: url('../images/separator-hor.png');
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+.hsep > *.last,
+.hsep > *:last-child { background-image: none }
+
+.hsep-t > * { background-position: 100% 0% }
+.hsep-b > * { background-position: 100% 100% }
+
+/* progressbox on send-order
+-------------------------------------------------------------- */
+.progressbox{
+	width:460px;
+	border:2px solid #000000;
+	padding:10px;
+
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	margin: -55px 0 0 -230px;
+
+}
+
+.progressbox .page-intro span{
+	padding:5px 0 0 0;
+}
+.progressbox .page-intro div{
+	padding-top:15px;
+}
+/* -------------------------------------------------------------- 
+
+   smartstore.print.css
+   * Defines rules for printing. 
+     Inlined to avoid required HTTP connection.
+   
+-------------------------------------------------------------- */
+
+@media print {
+	* 								{ background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important } 
+	a, a:visited 					{ color: #444 !important; text-decoration: underline }
+	a[href]:after 					{ content: " (" attr(href) ")" }
+	abbr[title]:after 				{ content: " (" attr(title) ")" }
+	.ir a:after, 
+	a[href^="javascript:"]:after, 
+	a[href^="#"]:after 				{ content: "" }  
+	pre, blockquote 				{ border: 1px solid #999; page-break-inside: avoid }
+	thead 							{ display: table-header-group }
+	tr, img 						{ page-break-inside: avoid }
+	@page 							{ margin: 0.5cm }
+	p, h2, h3 						{ orphans: 3; widows: 3 }
+	h2, h3							{ page-break-after: avoid }
+	
+	#header-wrapper,
+	#footer-wrapper,
+	#minibasket,
+	#content-left,
+	#content-right,
+	#breadcrumb						{ display: none }
+	
+}

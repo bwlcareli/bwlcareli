@@ -1,0 +1,229 @@
+#shipmethods{
+	width: 100%;
+}
+.shipmethod-line.hr{
+	border-bottom: 1px solid #ccc;
+	padding: .5em;
+}
+.shipmethod-line.even{
+	background-color: #F0F0F0;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%, #F9F9F9), color-stop(65%, #F9F9F9), color-stop(100%, #F0F0F0) );
+	background: linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -moz-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -webkit-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -o-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -ms-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF9F9F9', endColorstr='#FFF0F0F0', GradientType=0 );
+}
+.ie9 .shipmethod-line.even{
+	background: url(../images/list.gradient.svg);
+	background-size: 100% 100%;
+}
+.shipmethod-line td{
+	vertical-align: top !important;
+}
+.shipmethod-thumb{
+	border: 0;
+	height: auto;
+    max-width: 120px;
+    width: auto;
+    /*
+	float: left;
+	*/
+}
+.shipmethod-line li{
+	margin-bottom: 5px;
+}
+.shipmethod-line .option{
+	width: 16px;
+}
+.shipmethod-line .option input{
+	vertical-align: middle;
+}
+.shipmethod-info{
+	/*
+	margin-left: 130px;
+	*/
+	/*
+	width: 100%;
+	*/
+}
+.shipment-charge{
+	min-width: 120px;
+}
+.shipmethod-info h3{
+	margin-bottom: 0.5em;
+	padding-top: 1px;
+	font-size: 1em !important;
+}
+.shipmethod-info h3 label{
+	vertical-align: baseline;
+	font-size: 1.5em;
+}
+.shipmethod-info h3 .heading{
+    font-size: 1.5em;
+    vertical-align: text-top;
+}
+
+#shipmethodselector .btn-panel{
+	margin-top: 10px;
+	padding: 5px;
+}
+#shipmethodselector .btn-panel .btn{
+	margin-left: 5px;
+}
+
+#SMPAYERRDESC{
+	display: none;
+	font-weight: bold;
+	color: #ff0000;
+	background-color: #ffffff;
+	border: 2px solid #ff0000;
+	padding: 10px;
+}
+#SMPAYACTION{
+	padding: 5px 0;
+}
+#SMPAYACTION.btn-panel{
+	margin-top: 10px;
+	padding: 5px;
+}
+#SMPAYACTION .btn{
+	margin-left: 5px;
+}
+.paymethod{
+	width: 100%;
+}
+.paymethod-line {
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+}
+.paymethod-line.hr{
+	border-bottom: 1px solid #ccc;
+}
+
+.paymethod-line.even{
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0%, #F9F9F9), color-stop(65%, #F9F9F9), color-stop(100%, #F0F0F0) );
+	background: linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -moz-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -webkit-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -o-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	background: -ms-linear-gradient( top, #F9F9F9 0%, #F9F9F9 65%, #F0F0F0 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF9F9F9', endColorstr='#FFF0F0F0', GradientType=0 );
+}
+.ie9 .paymethod-line.even{
+	background: url(../images/list.gradient.svg);
+	background-size: 100% 100%;
+}
+
+.paymethod-line .heading input[type="radio"]  {
+	vertical-align: middle !important;
+	padding-right: 0;
+}
+.paymethod-line .heading h3 {
+	margin: .3em 0;
+}
+.paymethod-line p {
+	margin-bottom: 0;
+}
+.paymethod-thumb{
+	border: 0;
+	height:auto;
+    max-width:120px;
+    width:auto;
+    /*
+	float:left;
+	*/
+}
+/*
+.paymethod-info{
+	margin-left:130px;
+}
+*/
+/*
+.paymethod-info input{
+	vertical-align: middle;
+	float: left;
+}
+.moz .paymethod-info input{
+	margin-top: 3px;
+}
+*/
+.paymethod-desc,
+.paymethod-charge,
+.paymethod-info .heading,
+.paymethod-info fieldset{
+	margin-left: 28px;
+}
+.paymethod-info .heading{
+	display: block;
+}
+.paymethod-info h3{
+	margin-bottom: 0.5em;
+	font-size: 1em !important;
+}
+.paymethod-info h3 .heading{
+    font-size: 1.5em;
+    vertical-align: top;
+}
+
+.paymethod-info label.wrap.clearfix{
+	vertical-align: middle;
+	float: left;
+}
+/*---------------------------------------
+	smartstore.basket.css
+    defines basket formatting.
+----------------------------------------*/
+.page-send-order #basket {
+	background: #f0f0f0;
+}
+
+#basket {
+	border: 1px solid #9E9E9E;
+	width: 100%;
+}
+
+#basket > tbody > tr > td,
+#basket > tfoot > tr:first-child > td {
+	border-bottom: 1px solid #ccc;
+	background: transparent url('../images/shadow-b.png') 0 0 repeat-x;
+	/*background-image: -webkit-gradient(
+    	linear,
+    	left top,
+    	left bottom,
+    	color-stop(0, rgba(127,127,127, 0.22)),
+    	color-stop(0.1, rgba(127,127,127, 0.1)),
+    	color-stop(0.4, rgba(255,255,255, 0)));*/
+}
+
+#basket > tbody > tr > td:last-child,
+#basket > tfoot > tr > td:last-child {
+	background-color: #E7E7E7;
+	border-bottom: 1px solid #bbb;
+	font-weight: bold;
+}
+
+#basket > tbody > tr > td.empty {
+	font-weight: normal !important;
+}
+
+#basket > tfoot > tr > td {
+	border-bottom: none !important;
+}
+
+.basket-buttons #btn-reset-basket,
+.basket-buttons #btn-checkout{
+	display: none;
+}
+
+.basket-buttons a{
+	margin:10px 0;
+	display:inline-block;
+}
+.basket-buttons .left{float:left;}
+.basket-buttons .right{float:right;}
+
+.addbasket-qtyfield{
+	max-width: 45px;
+}

@@ -1,0 +1,47 @@
+/* -------------------------------------------------------------- 
+   smartstore.scrollbutton.css
+-------------------------------------------------------------- */
+.scroll-button {
+	position: relative;
+	text-indent: -9999px;
+	display: block;
+	/*border-color: #2E2E2E !important;*/
+	outline: 0 !important;
+	overflow: hidden;
+}
+.scroll-button.disabled {
+	cursor: default !important;
+}
+.scroll-button .icon,
+.scroll-button .ui-icon {
+	position: relative;
+	left: 50%;
+	top: 50%;
+}
+.scroll-button .icon {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: -11px 0 0 -11px;
+	background-image: url('../images/scrollbutton-arrows.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	text-indent: -99999px;
+	overflow: hidden;
+}
+.scroll-button .ui-icon {
+	margin: -8px 0 0 -8px;
+}
+.scroll-button.sb-dir-left .icon 						{ background-position: -22px 0 }
+.scroll-button.sb-dir-left.ui-state-hover .icon 		{ background-position: -22px -22px }
+.scroll-button.sb-dir-left.ui-state-active .icon 		{ background-position: -22px -44px }
+.scroll-button.sb-dir-right .icon 						{ background-position: 0 0 }
+.scroll-button.sb-dir-right.ui-state-hover .icon 		{ background-position: 0 -22px }
+.scroll-button.sb-dir-right.ui-state-active .icon 		{ background-position: 0 -44px }
+.scroll-button.sb-dir-up .icon 							{ background-position: -44px 0 }
+.scroll-button.sb-dir-up.ui-state-hover .icon 			{ background-position: -44px -22px }
+.scroll-button.sb-dir-up.ui-state-active .icon 			{ background-position: -44px -44px }
+.scroll-button.sb-dir-down .icon 						{ background-position: -66px 0 }
+.scroll-button.sb-dir-down.ui-state-hover .icon 		{ background-position: -66px -22px }
+.scroll-button.sb-dir-down.ui-state-active .icon 		{ background-position: -66px -44px }
+
