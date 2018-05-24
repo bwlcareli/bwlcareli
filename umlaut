@@ -1,11 +1,16 @@
-public class Test {
-    public static void main(String[] args) {
-        String inputtext = "ärmel öl über";
+# Replace european accents and umlauts with their simple counterparts
+# ä -> a, ç -> c, etc.
 
-        inputtext = inputtext.replace("ä","ae");
-        inputtext = inputtext.replace("ö","oe");
-        inputtext = inputtext.replace("ü","ue");
-
-        System.out.println(inputtext);
-    }
-}
+class String
+  def simplify
+    gsub(/[àáâãäåæ]/i, 'a').
+    gsub(/[ç]/i, 'c').
+    gsub(/[èéêë]/i, 'e').
+    gsub(/[ìíîï]/i, 'i').
+    gsub(/[ñ]/i, 'n').
+    gsub(/[òóôõöø]/i, 'o').
+    gsub(/[ùúûü]/i, 'u').
+    gsub(/[ýÿ]/i, 'y').
+    to_s
+  end
+end
