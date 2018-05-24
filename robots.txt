@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /broker
+Disallow: /broker/orders
+
+Allow: /

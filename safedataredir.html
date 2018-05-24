@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Careli - Redirect...</title>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="robots" content="noindex, nofollow" />
+	
+	<script type="text/javascript">
+	<!--
+	function redirect(){
+		var fsrc = "./index.html";
+		if(parent.location.search){
+			fsrc = unescape(parent.location.search.substring(6,parent.location.search.length));
+		};
+		if(/Konqueror|Safari|KHTML/.test(navigator.userAgent))
+		{
+			window.open(fsrc, "_blank");
+			document.write("<form><input type=\"button\" onclick=\"window.open('" + fsrc + "', '_blank');\" value=\"Open\"></form>");
+			return;
+		}
+		else location.replace(fsrc);
+	};
+	//-->
+	</script>
+</head>
+<body onload="redirect()">&nbsp;</body>
+</html>

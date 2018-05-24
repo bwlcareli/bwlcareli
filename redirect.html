@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html><head><title>Redirect...</title>
+<script type="text/javascript">
+	
+	function parseQueryString( queryString ) {
+		try {
+			var valuePairs = queryString.split('&');
+			var getArray = new Array();
+			for (var i = 0; i < valuePairs.length; i++) {
+				// [0] = key, [1] = value
+		  		var tempPair = valuePairs[i].split('='); 
+				// Unescape converts the text back from URL encoding
+				getArray[tempPair[0]] = tempPair[1];
+			}
+			return getArray;
+		}
+		catch (e) { }
+	}
+	
+	function SMRedirect(){
+		
+		var queryParams = new Array(), callback, status,
+			$self = self.name, $pos = $self.indexOf(":::"), $mode = "";
+		
+		if (window.location.search != "") {
+			queryParams = parseQueryString(window.location.search.substr(1));
+		} else if($pos != -1) {
+			var url = $self.substring($pos + 3);
+			var query = url.substring(url.lastIndexOf('?') + 1);
+			
+			queryParams = parseQueryString(query);
+			
+			// forms with redirect addresses
+			$mode = $self.substring(0, $pos);
+			
+			switch($mode){
+				case "replace":
+					parent.location.replace($self.substring($pos + 3));
+					window.clearInterval(mInterval);
+					return;
+					break;
+				case "redirect":
+					parent.location.href = unescape($self.substring($pos + 3));
+					window.clearInterval(mInterval);
+					return;
+					break;
+			};
+			
+		}
+		
+		callback = queryParams["callback"];
+		status = queryParams["status"];
+		
+		if ($pos != -1) {
+			window.clearInterval(mInterval);
+		}
+		
+		if (callback) {
+			eval("window.parent." + callback + "('" + status + "')");
+			window.clearInterval(mInterval);
+		}
+	};
+	
+	function SMCheckName(){
+		mInterval = window.setInterval(SMRedirect, 100);
+	};
+	
+	var mInterval = null;
+</script>
+</head><body onload="SMCheckName()"></body></html>
