@@ -1,0 +1,11 @@
+public class Test {
+    public static void main(String[] args) {
+        String inputtext = "ärmel öl über";
+
+        inputtext = inputtext.replace("ä","ae");
+        inputtext = inputtext.replace("ö","oe");
+        inputtext = inputtext.replace("ü","ue");
+
+        System.out.println(inputtext);
+    }
+}
