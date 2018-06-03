@@ -301,7 +301,7 @@ return('');
 };
 var m_arrShipMethods=new Array();
 m_arrShipMethods[2]="2;DHL;Die_20Zustellung_20erfolgt_20durch_20DHL;;;1;0;;;;DM_X201002";m_arrShipMethods[3]="3;UPS;Die_20Zustellung_20erfolgt_20durch_20UPS;;;1;0;;;;DM_X201003";var m_arrShipCalculators=new Array();
-m_arrShipCalculators[2]='0;0;10;0;0;172.42;';m_arrShipCalculators[3]='0;0;10;0;0;172.42;';var m_arrZoneCalculators=new Array();
+m_arrShipCalculators[2]='0;0;10;0;0;50;';m_arrShipCalculators[3]='0;0;10;0;0;50;';var m_arrZoneCalculators=new Array();
 var m_arrShipZones=new Array();
 var m_arrShipTables=new Array();
 var oSMShipMethods=null;oSMShipMethods=new SMShipMethods();SMShop.base.addMember("oSMShipMethods");function oSMShipMethods_windowOnLoad(args){var oShipSelector=null;oSMShipMethods=new SMShipMethods();if(document.getElementById("shipmethodselector")){oShipSelector=document.getElementById("shipmethodselector");oShipSelector.innerHTML=oSMShipMethods.htmlTable();SMShop.initShipmentButtons();oShipSelector.style.height=oShipSelector.offsetHeight;};};

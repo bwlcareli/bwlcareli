@@ -2019,13 +2019,13 @@ if(addedProduct.deliveryTime!="")sProductHtml+='<div class="deliverytime">Liefer
 sProductHtml+='		<a class="btn smaller delete special" data-index="'+currentIndex+'" data-id="'+addedProduct.getAttribute(_SMAUniqueID)+'">Position löschen</a>';
 sProductHtml+='	<div class="mb-popup-bottom deliverytime-short">';
 if(addedProduct.deliveryTime.length>20)sProductHtml+='	<div class="mb-popup-bottom deliverytime-long">';
-sProductHtml+='		<span>* Alle Preisangaben sind zzgl. <a href="../../pg8.html">Versandkosten</a> - inkl. MwSt</span>';
+sProductHtml+='		<span>* Alle Preisangaben sind zzgl. <a href="../pg8.html">Versandkosten</a> - inkl. MwSt</span>';
 sProductHtml+='	</div>';
 sProductHtml+='	</div>';
 /*
 sProductHtml+='	<div class="mb-popup-bottom deliverytime-short">';
 if(addedProduct.deliveryTime.length>20)sProductHtml+='	<div class="mb-popup-bottom deliverytime-long">';
-sProductHtml+='		<span>* Alle Preisangaben sind zzgl. <a href="../../pg8.html">Versandkosten</a> - inkl. MwSt</span>';
+sProductHtml+='		<span>* Alle Preisangaben sind zzgl. <a href="../pg8.html">Versandkosten</a> - inkl. MwSt</span>';
 sProductHtml+='	</div>';
 */
 sProductHtml+='</div>';

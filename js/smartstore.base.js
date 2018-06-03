@@ -113,7 +113,7 @@ catch(err){_.logError(err);}}};for(var name in m){if($[name]===undefined)$[name]
 ;(function($) {
 
 	var stageMode = true;
-	var searchPage = "../../pg3.html";
+	var searchPage = "../pg3.html";
 
 	$.Cfg = {
 		stageMode: stageMode,
@@ -154,7 +154,7 @@ catch(err){_.logError(err);}}};for(var name in m){if($[name]===undefined)$[name]
 		'dlg.ok': 'OK',
 		'exp.base-price': 'Grundpreis: %bp pro %mb %mu',
 		'exp.copyright': 'Copyright %dy %cp. Alle Rechte vorbehalten.',
-		'exp.ship-costs-info': 'zzgl. <a href=\"../../pg35.html">Versandkosten</a>',
+		'exp.ship-costs-info': 'zzgl. <a href=\"../pg35.html">Versandkosten</a>',
 		'exp.ship-surcharge-info': 'zzgl. %su Transportzuschlag',
 		'label.shipping-equals-billing': 'Lieferanschrift ist gleich Rechnungsanschrift',
 		'lbl.accept-disclaimer.digital-content.long': 'Ich stimme ausdr\u00fccklich zu, dass Sie vor Ablauf der Widerrufsfrist mit der Ausf\u00fchrung des Vertrages beginnen. Mir ist bekannt, dass ich durch diese Zustimmung mit Beginn der Ausf\u00fchrung des Vertrages mein Widerrufsrecht verliere.',
@@ -184,7 +184,7 @@ catch(err){_.logError(err);}}};for(var name in m){if($[name]===undefined)$[name]
 		'lbl.incl-tax': 'Enthaltene MwSt.',
 		'lbl.info': 'Info',
 		'lbl.last-updated': 'Zuletzt aktualisiert am',
-		'lbl.legalhints': '* Alle Preisangaben sind zzgl. <a href=\"../../pg35.html">Versandkosten</a> %vh',
+		'lbl.legalhints': '* Alle Preisangaben sind zzgl. <a href=\"../pg35.html">Versandkosten</a> %vh',
 		'lbl.line-total': 'Gesamt',
 		'lbl.link-gtb': 'Bitte beachten Sie auch unsere Allgemeinen Gesch\u00e4ftsbedingungen.',
 		'lbl.manufacturer': 'Hersteller',
